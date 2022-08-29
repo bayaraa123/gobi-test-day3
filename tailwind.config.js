@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+const defaultTheme = require('tailwindcss/defaultTheme');
+
 module.exports = {
   content: [
     './pages/**/*.{js,ts,jsx,tsx}',
@@ -24,12 +26,12 @@ module.exports = {
       sm: ['12px', '24px'],
       md: ['13px', '26px'],
       // base: ['16px', '24px'],
+      md2: ['18px', '24px'],
       lg: ['20px', '28px'],
       xl: ['24px', '32px'],
     },
     fontFamily: {
-      sans: ['Roboto', 'sans-serif'],
-      serif: ['Loto', 'serif'],
+      sans: ['Roboto', ...defaultTheme.fontFamily.sans],
     },
     extend: {},
   },
